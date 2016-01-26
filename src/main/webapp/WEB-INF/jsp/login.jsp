@@ -10,11 +10,11 @@
         <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
         <title>Super Admin Responsive Template</title>
         <!-- CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/form.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/animate.css" rel="stylesheet">
-        <link href="css/generics.css" rel="stylesheet"> 
+        <link href="${contextPath }/static/html/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${contextPath }/static/html/css/form.css" rel="stylesheet">
+        <link href="${contextPath }/static/html/css/style.css" rel="stylesheet">
+        <link href="${contextPath }/static/html/css/animate.css" rel="stylesheet">
+        <link href="${contextPath }/static/html/css/generics.css" rel="stylesheet"> 
     </head>
     <body id="skin-blur-violate">
         <section id="login">
@@ -68,13 +68,13 @@
         
         <!-- Javascript Libraries -->
         <!-- jQuery -->
-        <script src="js/jquery.min.js"></script> <!-- jQuery Library -->
+        <script src="${contextPath }/static/html/js/jquery.min.js"></script> <!-- jQuery Library -->
         <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="${contextPath }/static/html/js/bootstrap.min.js"></script>
         <!--  Form Related -->
-        <script src="js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+        <script src="${contextPath }/static/html/js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
         <!-- All JS functions -->
-        <script src="js/functions.js"></script>
+        <script src="${contextPath }/static/html/js/functions.js"></script>
         
         
     </body>
