@@ -41,7 +41,7 @@ public class IndexController extends CommonController {
             model.put("username",username);
         }
 
-        return "登录";
+        return "login";
     }
 
     @RequestMapping(value = "/login/check")

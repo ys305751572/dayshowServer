@@ -31,7 +31,7 @@
                 <div class="checkbox m-b-20">
                     <label>
                         <input type="checkbox">
-                        Remember Me
+                                                                                   记住我
                     </label>
                 </div>
                 <button class="btn btn-sm m-r-5">Sign In</button>
