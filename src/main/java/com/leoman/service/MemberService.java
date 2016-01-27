@@ -16,4 +16,6 @@ public interface MemberService extends ICommonService<Member> {
     public Member findByUsernameAndPassword(String username,String password,String type);
 
     public Page<Member> findByBusiness(int pageNum, int pageSize);
+    
+    public Page<Member> findByAdmin(int pageNum, int pageSize);
 }

@@ -47,7 +47,7 @@ public class MemberController extends CommonController {
                      ModelMap model) {
             try {
                 int pageNum = getPageNum(start, length);
-                Page<Member> page = memberService.findByBusiness(pageNum, length);
+                Page<Member> page = memberService.findByAdmin(pageNum, length);
                 Map<String, Object> result = DataTableFactory.fitting(draw, page);
                 WebUtil.print(response, result);
             } catch (Exception e) {

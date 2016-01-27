@@ -10,20 +10,16 @@ import java.util.Date;
 @Entity
 @Table(name = "member")
 public class Member implements Serializable {
+	
+	private static final long serialVersionUID = 9076174573488102156L;
 
-    private static final long serialVersionUID = 1L;
-
-    @Id
+	@Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
     private String username;
 
     private String password;
-
-    @ManyToOne
-    @JoinColumn(name = "business_id")
-    private Business business;
 
     private String type;
 
@@ -57,14 +53,6 @@ public class Member implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Business getBusiness() {
-        return business;
-    }
-
-    public void setBusiness(Business business) {
-        this.business = business;
     }
 
     public String getType() {

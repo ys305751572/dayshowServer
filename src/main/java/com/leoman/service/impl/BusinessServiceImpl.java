@@ -109,7 +109,7 @@ public class BusinessServiceImpl implements BusinessService {
         member.setUsername(username);
         member.setPassword(password);
         member.setType("BUSINESS");
-        member.setBusiness(business);
+//        member.setBusiness(business);
         memberService.create(member);
 
         return business;

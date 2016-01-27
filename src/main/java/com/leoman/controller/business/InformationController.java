@@ -38,7 +38,8 @@ public class InformationController extends CommonController{
 
         Member member = loginService.getMember(request, Constant.MEMBER_TYPE_BUSINESS);
 
-        Integer businessId =   member.getBusiness().getId();
+//        Integer businessId =   member.getBusiness().getId();
+        Integer businessId =   null;
         Business business = businessService.getById(businessId);
         if(business.getImage()!=null){
             Image image = business.getImage();
@@ -65,7 +66,8 @@ public class InformationController extends CommonController{
         }
 
         Member member = loginService.getMember(request, Constant.MEMBER_TYPE_BUSINESS);
-        Integer businessId =   member.getBusiness().getId();
+        Integer businessId =   null;
+        //member.getBusiness().getId();
         businessService.update(businessId,business);
         WebUtil.print(response, new Result(true).msg("资料保存成功!"));
     }

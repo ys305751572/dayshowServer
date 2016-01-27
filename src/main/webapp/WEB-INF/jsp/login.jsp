@@ -24,17 +24,17 @@
             </header>
             <div class="clearfix"></div>
             <!-- Login -->
-            <form class="box tile animated active" action="admin/login/check" id="box-login">
+            <form class="box tile animated active" action="${contextPath }/admin/login/check" id="box-login" method="post">
                 <h2 class="m-t-0 m-b-15">Login</h2>
                 <input type="text" class="login-control m-b-10" id="username" name="username" placeholder="Username or Email Address">
                 <input type="password" class="login-control" id="password" name="password" placeholder="Password">
                 <div class="checkbox m-b-20">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" name="remark">
                                                                                    记住我
                     </label>
                 </div>
-                <button class="btn btn-sm m-r-5">Sign In</button>
+                <button class="btn btn-sm m-r-5" id="loginBtn" type="submit">登录</button>
                 
                 <small>
                     <a class="box-switcher" data-switch="box-register" href="">Don't have an Account?</a> or
@@ -50,9 +50,7 @@
                 <input type="email" class="login-control m-b-10" placeholder="Email Address">    
                 <input type="password" class="login-control m-b-10" placeholder="Password">
                 <input type="password" class="login-control m-b-20" placeholder="Confirm Password">
-
                 <button class="btn btn-sm m-r-5">Register</button>
-
                 <small><a class="box-switcher" data-switch="box-login" href="">Already have an Account?</a></small>
             </form>
             
@@ -75,7 +73,16 @@
         <script src="${contextPath }/static/html/js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
         <!-- All JS functions -->
         <script src="${contextPath }/static/html/js/functions.js"></script>
-        
+        <script type="text/javascript">
+        	$(function() {
+        		$loginBtn = $("#loginBtn");
+        		$loginForm = $("#box-login");
+        		
+        		$loginBtn.click(function() {
+        			loginForm.submit();
+        		});
+        	});
+        </script>
         
     </body>
 </html>

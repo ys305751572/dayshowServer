@@ -91,4 +91,9 @@ public class MemberServiceImpl implements MemberService {
     public Page<Member> findByBusiness(int pageNum, int pageSize) {
         return memberDao.findByBusiness(new PageRequest(pageNum - 1, pageSize, Sort.Direction.DESC, "id"));
     }
+
+	@Override
+	public Page<Member> findByAdmin(int pageNum, int pageSize) {
+		return memberDao.findByAdmin(new PageRequest(pageNum -1, pageSize, Sort.Direction.DESC,"id"));
+	}
 }
