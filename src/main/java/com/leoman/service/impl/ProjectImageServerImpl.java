@@ -6,12 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
 import com.leoman.core.Constant;
 import com.leoman.dao.ProjectImageDao;
 import com.leoman.entity.ProjectImages;
 import com.leoman.service.ProjectImagesService;
 
+@Service
 public class ProjectImageServerImpl implements ProjectImagesService{
 
 	@Autowired

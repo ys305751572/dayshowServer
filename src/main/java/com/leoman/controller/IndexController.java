@@ -82,7 +82,7 @@ public class IndexController extends CommonController {
                             HttpServletResponse response,
                             ModelMap model) {
 
-        return "tables";
+        return "project-list";
     }
 
 

@@ -191,7 +191,7 @@
                         
                         <ul class="list-inline list-mass-actions pull-left">
                             <li>
-                                <a data-toggle="modal" href="#compose-message" title="新增" class="tooltips">
+                                <a data-toggle="modal" href="#form-modal" title="新增" class="tooltips">
                                     <i class="sa-list-add"></i>
                                 </a>
                             </li>
@@ -231,6 +231,73 @@
                         </table>
                     </div>
                 </div>
+                 <!-- Modal -->
+                    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Modal title</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="inputName4" class="col-md-2 control-label">Name</label>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control input-sm" id="inputName4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4" class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4" class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4" class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4" class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4" class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputEmail4" class="col-md-2 control-label">Email</label>
+                                            <div class="col-md-9">
+                                                <input type="email" class="form-control input-sm" id="inputEmail4" placeholder="...">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputMessage3" class="col-md-2 control-label">Message</label>
+                                            <div class="col-md-9">
+                                                <textarea class="form-control auto-size input-sm" id="inputMessage3" placeholder="..."></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-sm btn-alt">Save changes</button>
+                                    <button type="button" class="btn btn-sm btn-alt" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </section>
             <br/><br/>
         </section>
