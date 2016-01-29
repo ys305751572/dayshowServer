@@ -15,8 +15,8 @@ $(document).ready(function(){
 				'</div>' +
 				'<div class="modal-body">' +
 				    '<div class="row template-skins">' +
-					'<a data-skin="skin-blur-violate" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-violate.jpg" alt="">' +
+					'<a data-skin="skin-blur-blue" class="col-sm-2 col-xs-4" href="">' +
+					    '<img src="img/skin-blue.jpg" alt="">' +
 					'</a>' +
 					'<a data-skin="skin-blur-lights" class="col-sm-2 col-xs-4" href="">' +
 					    '<img src="img/skin-lights.jpg" alt="">' +
@@ -30,8 +30,8 @@ $(document).ready(function(){
 					'<a data-skin="skin-blur-night" class="col-sm-2 col-xs-4" href="">' +
 					    '<img src="img/skin-night.jpg" alt="">' +
 					'</a>' +
-					'<a data-skin="skin-blur-blue" class="col-sm-2 col-xs-4" href="">' +
-					    '<img src="img/skin-blue.jpg" alt="">' +
+					'<a data-skin="skin-blur-violate" class="col-sm-2 col-xs-4" href="">' +
+					    '<img src="img/skin-violate.jpg" alt="">' +
 					'</a>' +
 					'<a data-skin="skin-blur-sunny" class="col-sm-2 col-xs-4" href="">' +
 					    '<img src="img/skin-sunny.jpg" alt="">' +
