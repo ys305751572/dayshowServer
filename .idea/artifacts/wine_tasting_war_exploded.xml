@@ -4,7 +4,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="wine-tasting" />
+          <element id="module-output" name="DayshowServer" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
@@ -80,7 +80,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/wine-tasting/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="wine-tasting/web/Web" />
+      <element id="javaee-facet-resources" facet="DayshowServer/web/Web" />
     </root>
   </artifact>
 </component>
