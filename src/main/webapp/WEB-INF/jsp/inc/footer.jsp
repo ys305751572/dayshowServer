@@ -94,6 +94,8 @@
 <script src="${contextPath }/static/js/sb-admin-2.js"></script>
 <script src="${contextPath }/static/js/global.js"></script>
 
+<script src="${contextPath }/static/js/uploadPreview.min.js"></script>
+
 <script type="text/javascript">
 	$(function() {
 		$("#mediator").click(function() {

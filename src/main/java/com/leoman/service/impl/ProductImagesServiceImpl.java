@@ -47,13 +47,13 @@ public class ProductImagesServiceImpl implements ProductImagesService {
     }
 
     @Override
-    public ProductImages getById(int id) {
+    public ProductImages getById(Long id) {
         return productImagesDao.findOne(id);
     }
 
     @Override
     @Transactional
-    public ProductImages deleteById(int id) {
+    public ProductImages deleteById(Long id) {
         ProductImages productImages = getById(id);
         productImagesDao.delete(productImages);
         return productImages;
@@ -74,27 +74,27 @@ public class ProductImagesServiceImpl implements ProductImagesService {
 
     @Override
     @Transactional
-    public void deleteAll(int[] ids) {
-        for (int id : ids) {
+    public void deleteAll(Long[] ids) {
+        for (Long id : ids) {
             deleteById(id);
         }
     }
 
     @Override
     @Transactional
-    public void deleteByProductId(Integer productId) {
+    public void deleteByProductId(Long productId) {
         productImagesDao.deleteByProductId(productId);
     }
 
     @Override
     @Transactional
-    public void delete(Integer productId,Integer imageId) {
+    public void delete(Long productId,Long imageId) {
         imageService.deleteById(imageId);
         productImagesDao.delete(productId,imageId);
     }
 
     @Override
-    public List<Image> findImageListByProduct(Integer productId) {
+    public List<Image> findImageListByProduct(Long productId) {
         return productImagesDao.findImagesByProduct(productId);
     }
 

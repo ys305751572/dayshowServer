@@ -12,18 +12,18 @@ import java.util.List;
 /**
  * Created by wangbin on 2015/4/16.
  */
-public interface ProductImagesDao extends JpaRepository<ProductImages, Integer> {
+public interface ProductImagesDao extends JpaRepository<ProductImages, Long> {
 
     @Modifying
     @Query("delete from ProductImages a where a.product.id =?1")
-    public void deleteByProductId(Integer productId);
+    public void deleteByProductId(Long productId);
 
     @Modifying
     @Query("delete from ProductImages a where a.product.id =?1 and a.image.id=?2")
-    public void delete(Integer productId, Integer imageId);
+    public void delete(Long productId, Long imageId);
 
     @Query("select a.image from ProductImages a where a.product.id =?1")
-    public List<Image> findImagesByProduct(Integer productId);
+    public List<Image> findImagesByProduct(Long productId);
 
 
 

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by wangbin on 2015/8/17.
  */
-public interface ProductDao extends JpaRepository<Product, Integer> {
+public interface ProductDao extends JpaRepository<Product, Long> {
 
 
 }

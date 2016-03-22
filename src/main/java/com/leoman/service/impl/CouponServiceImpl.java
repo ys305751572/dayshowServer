@@ -49,13 +49,13 @@ public class CouponServiceImpl implements CouponService {
     }
 
     @Override
-    public Coupon getById(int id) {
+    public Coupon getById(Long id) {
         return couponDao.findOne(id);
     }
 
     @Override
     @Transactional
-    public Coupon deleteById(int id) {
+    public Coupon deleteById(Long id) {
         Coupon coupon = getById(id);
         couponDao.delete(coupon);
         return coupon;
@@ -79,8 +79,8 @@ public class CouponServiceImpl implements CouponService {
 
     @Override
     @Transactional
-    public void deleteAll(int[] ids) {
-        for (int id : ids) {
+    public void deleteAll(Long[] ids) {
+        for (Long id : ids) {
             deleteById(id);
         }
     }

@@ -22,37 +22,35 @@ public abstract class BaseEntity implements Serializable{
 
 	@Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 	
 	@Column(name="create_date")
-	@Temporal(TemporalType.DATE)
-	private Date createDate;
+	private Long createDate;
 	
 	@Column(name="update_date")
-	@Temporal(TemporalType.DATE)
-	private Date updateDate;
+	private Long updateDate;
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public Date getCreateDate() {
+	public Long getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(Long createDate) {
 		this.createDate = createDate;
 	}
 
-	public Date getUpdateDate() {
+	public Long getUpdateDate() {
 		return updateDate;
 	}
 
-	public void setUpdateDate(Date updateDate) {
+	public void setUpdateDate(Long updateDate) {
 		this.updateDate = updateDate;
 	}
 }

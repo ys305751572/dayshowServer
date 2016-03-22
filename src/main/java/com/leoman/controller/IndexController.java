@@ -41,7 +41,7 @@ public class IndexController extends CommonController {
             model.put("username",username);
         }
 
-        return "login";
+        return "登录";
     }
 
     @RequestMapping(value = "/login/check")
@@ -82,7 +82,7 @@ public class IndexController extends CommonController {
                             HttpServletResponse response,
                             ModelMap model) {
 
-        return "tables";
+        return "首页";
     }
 
 

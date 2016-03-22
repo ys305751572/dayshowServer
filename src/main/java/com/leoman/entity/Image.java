@@ -15,7 +15,7 @@ public class Image implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String path;
 
@@ -27,11 +27,11 @@ public class Image implements Serializable {
     @Column(name = "create_date")
     private Date createDate;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

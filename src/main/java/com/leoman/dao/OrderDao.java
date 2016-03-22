@@ -7,5 +7,5 @@ import com.leoman.entity.Order;
 /**
  * Created by wangbin on 2015/8/28.
  */
-public interface OrderDao extends JpaRepository<Order, Integer> {
+public interface OrderDao extends JpaRepository<Order, Long> {
 }

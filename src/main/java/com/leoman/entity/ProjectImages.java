@@ -14,7 +14,7 @@ public class ProjectImages extends BaseEntity{
 	private String url;
 	
 	@Column(name="project_id")
-	private Integer projectId;
+	private Long projectId;
 
 	public String getUrl() {
 		return url;
@@ -24,11 +24,11 @@ public class ProjectImages extends BaseEntity{
 		this.url = url;
 	}
 
-	public Integer getProjectId() {
+	public Long getProjectId() {
 		return projectId;
 	}
 
-	public void setProjectId(Integer projectId) {
+	public void setProjectId(Long projectId) {
 		this.projectId = projectId;
 	}
 }

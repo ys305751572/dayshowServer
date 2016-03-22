@@ -49,12 +49,12 @@ public class ProjectServiceImpl implements ProjectService{
 	}
 
 	@Override
-	public Project getById(int id) {
+	public Project getById(Long id) {
 		return dao.findOne(id);
 	}
 
 	@Override
-	public Project deleteById(int id) {
+	public Project deleteById(Long id) {
 		Project project = dao.findOne(id);
 		dao.delete(project);
 		return project;
@@ -71,8 +71,8 @@ public class ProjectServiceImpl implements ProjectService{
 	}
 
 	@Override
-	public void deleteAll(int[] ids) {
-		for (int i : ids) {
+	public void deleteAll(Long[] ids) {
+		for (Long i : ids) {
 			deleteById(i);
 		}
 	}

@@ -8,9 +8,9 @@ import com.leoman.entity.Image;
  */
 public interface ImageService {
 
-    public Image getById(int id);
+    public Image getById(Long id);
 
-    public Image deleteById(int id);
+    public Image deleteById(Long id);
 
     public Image create(Image image);
 

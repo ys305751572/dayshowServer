@@ -43,13 +43,13 @@ public class ProductTypeServiceImpl implements ProductTypeService {
     }
 
     @Override
-    public ProductType getById(int id) {
+    public ProductType getById(Long id) {
         return productTypeDao.findOne(id);
     }
 
     @Override
     @Transactional
-    public ProductType deleteById(int id) {
+    public ProductType deleteById(Long id) {
         ProductType productType = getById(id);
         productTypeDao.delete(productType);
         return productType;
@@ -74,8 +74,8 @@ public class ProductTypeServiceImpl implements ProductTypeService {
 
     @Override
     @Transactional
-    public void deleteAll(int[] ids) {
-        for (int id : ids) {
+    public void deleteAll(Long[] ids) {
+        for (Long id : ids) {
             deleteById(id);
         }
     }

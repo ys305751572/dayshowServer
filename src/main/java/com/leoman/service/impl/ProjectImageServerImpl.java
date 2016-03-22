@@ -35,12 +35,12 @@ public class ProjectImageServerImpl implements ProjectImagesService{
 	}
 
 	@Override
-	public ProjectImages getById(int id) {
+	public ProjectImages getById(Long id) {
 		return dao.findOne(id);
 	}
 
 	@Override
-	public ProjectImages deleteById(int id) {
+	public ProjectImages deleteById(Long id) {
 		ProjectImages image = dao.findOne(id);
 		dao.delete(image);
 		return image; 
@@ -57,8 +57,8 @@ public class ProjectImageServerImpl implements ProjectImagesService{
 	}
 
 	@Override
-	public void deleteAll(int[] ids) {
-		for (int i : ids) {
+	public void deleteAll(Long[] ids) {
+		for (Long i : ids) {
 			deleteById(i);
 		}
 	}

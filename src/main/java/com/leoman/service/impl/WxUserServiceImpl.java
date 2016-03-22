@@ -51,13 +51,13 @@ public class WxUserServiceImpl implements WxUserService {
     }
 
     @Override
-    public WxUser getById(int id) {
+    public WxUser getById(Long id) {
         return wxUserDao.findOne(id);
     }
 
     @Override
     @Transactional
-    public WxUser deleteById(int id) {
+    public WxUser deleteById(Long id) {
         WxUser wxUser = getById(id);
         wxUserDao.delete(wxUser);
         return wxUser;
@@ -79,8 +79,8 @@ public class WxUserServiceImpl implements WxUserService {
 
     @Override
     @Transactional
-    public void deleteAll(int[] ids) {
-        for (int id : ids) {
+    public void deleteAll(Long[] ids) {
+        for (Long id : ids) {
             deleteById(id);
         }
     }
