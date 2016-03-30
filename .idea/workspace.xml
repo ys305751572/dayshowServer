@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf4f9aef-ec5d-455d-a01d-d872d60f9ae3" name="Default" comment="11">
+    <list default="true" id="cf4f9aef-ec5d-455d-a01d-d872d60f9ae3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wine-tasting.iws" />
@@ -828,7 +828,7 @@
       <workItem from="1457403261547" duration="1416000" />
       <workItem from="1457404921637" duration="854000" />
       <workItem from="1457413149775" duration="2559000" />
-      <workItem from="1459302699847" duration="705000" />
+      <workItem from="1459302699847" duration="746000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1459303357874</created>
@@ -836,11 +836,17 @@
       <option name="project" value="LOCAL" />
       <updated>1459303357874</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="11">
+      <created>1459303408375</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1459303408375</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5743000" />
+    <option name="totallyTimeSpent" value="5784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
