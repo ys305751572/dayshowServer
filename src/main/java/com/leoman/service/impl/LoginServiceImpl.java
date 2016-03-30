@@ -70,7 +70,11 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public Boolean login(HttpServletRequest request, String username, String password, String type, String remark) {
+    public Boolean login(HttpServletRequest request,
+                         String username,
+                         String password,
+                         String type,
+                         String remark) {
 //        Member member = memberService.findByUsernameAndPassword(username, password, type);
         Admin admin = null;
         try {
