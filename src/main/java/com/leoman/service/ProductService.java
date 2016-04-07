@@ -8,7 +8,7 @@ import com.leoman.service.common.ICommonService;
  */
 public interface ProductService extends ICommonService<Product> {
 
-    public void settingAdded(int id);
+    public void settingAdded(Long id);
 
     public Product create(Product product,String imageIds);
 

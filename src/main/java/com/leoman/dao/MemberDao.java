@@ -10,7 +10,7 @@ import com.leoman.entity.Member;
 /**
  * Created by wangbin on 2015/8/10.
  */
-public interface MemberDao extends JpaRepository<Member, Integer> {
+public interface MemberDao extends JpaRepository<Member, Long> {
 
     @Query("select a from Member a where a.username = ?1 and a.password = ?2")
     public Member findByUnameAndPword(String username,String password);

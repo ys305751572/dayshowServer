@@ -47,7 +47,8 @@ public class IndexController extends CommonController {
     @RequestMapping(value = "/login/check")
     public String checkLogin(String username,
                              String password,
-                             HttpServletRequest request, HttpServletResponse response,
+                             HttpServletRequest request,
+                             HttpServletResponse response,
                              String remark,
                              ModelMap model) {
 
@@ -82,7 +83,7 @@ public class IndexController extends CommonController {
                             HttpServletResponse response,
                             ModelMap model) {
 
-        return "控制面板";
+        return "首页";
     }
 
 

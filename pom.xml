@@ -26,6 +26,24 @@
 
 
 	<dependencies>
+
+		<!-- excel -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.10-FINAL</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.10-FINAL</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.10-FINAL</version>
+		</dependency>
+
 		<!-- servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -289,11 +307,11 @@
 		<profile>
 			<id>dev-wb</id>
 			<properties>
-				<pro.jdbc.url>jdbc:mysql://localhost:3306/yqss?characterEncoding=UTF-8</pro.jdbc.url>
+				<pro.jdbc.url>jdbc:mysql://4.16.3.75:3306/dayshow?characterEncoding=UTF-8</pro.jdbc.url>
 				<pro.jdbc.username>root</pro.jdbc.username>
 				<pro.jdbc.password>root</pro.jdbc.password>
-				<pro.upload.url>http://10.58.169.58:8080/files/upload/</pro.upload.url>
-				<pro.upload.path>D:/Development/apache-tomcat-7.0.57/webapps/files/upload/</pro.upload.path>
+				<pro.upload.url>http://localhost:8080/files/upload/</pro.upload.url>
+				<pro.upload.path>D:/devsoftware/apache-tomcat-7.0.67/webapps/files/upload/</pro.upload.path>
 			</properties>
 		</profile>
 	</profiles>

@@ -7,6 +7,11 @@
           <element id="module-output" name="DayshowServer" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.poi:poi:3.10-FINAL" />
+          <element id="library" level="project" name="Maven: org.apache.poi:poi-ooxml:3.10-FINAL" />
+          <element id="library" level="project" name="Maven: org.apache.poi:poi-ooxml-schemas:3.10-FINAL" />
+          <element id="library" level="project" name="Maven: org.apache.xmlbeans:xmlbeans:2.3.0" />
+          <element id="library" level="project" name="Maven: stax:stax-api:1.0.1" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.2.1" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.30" />

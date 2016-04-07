@@ -51,13 +51,13 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getById(int id) {
+    public Product getById(Long id) {
         return productDao.findOne(id);
     }
 
     @Override
     @Transactional
-    public Product deleteById(int id) {
+    public Product deleteById(Long id) {
         Product product = getById(id);
         productImagesService.deleteByProductId(id);
         productDao.delete(product);
@@ -83,8 +83,8 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public void deleteAll(int[] ids) {
-        for (int id : ids) {
+    public void deleteAll(Long[] ids) {
+        for (Long id : ids) {
             deleteById(id);
         }
     }
@@ -98,7 +98,7 @@ public class ProductServiceImpl implements ProductService {
             String[] ids = imageIds.split(",");
             for(String id :ids){
                 Image image = new Image();
-                Integer imageId =  Integer.valueOf(id);
+                Long imageId =  Long.valueOf(id);
                 image.setId(imageId);
                 ProductImages productImages = new ProductImages();
                 productImages.setImage(image);
@@ -118,7 +118,7 @@ public class ProductServiceImpl implements ProductService {
             String[] ids = imageIds.split(",");
             for(String id :ids){
                 Image image = new Image();
-                Integer imageId =  Integer.valueOf(id);
+                Long imageId =  Long.valueOf(id);
                 image.setId(imageId);
                 ProductImages productImages = new ProductImages();
                 productImages.setImage(image);
@@ -131,7 +131,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public void settingAdded(int id) {
+    public void settingAdded(Long id) {
         Product product = getById(id);
         if (product.getIsAdded()) {
             product.setIsAdded(false);

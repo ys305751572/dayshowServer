@@ -12,14 +12,22 @@ import java.util.Map;
 public class DataTableFactory {
 
 
-    public static Map<String,Object> fitting(Integer draw,Page<?> page){
+    public static Map<String, Object> fitting(Integer draw, Page<?> page) {
         List<?> list = page.getContent();
-        Map<String,Object>  map = new HashMap<String, Object>();
-        map.put("data",list);
-        map.put("draw",draw);
-        map.put("iTotalRecords",page.getTotalElements());
-        map.put("iTotalDisplayRecords",page.getTotalElements());
-        return  map;
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("data", list);
+        map.put("draw", draw);
+        map.put("iTotalRecords", page.getTotalElements());
+        map.put("iTotalDisplayRecords", page.getTotalElements());
+        return map;
     }
 
+    public static Map<String, Object> fittingList(Integer draw, Integer totalElements, List list) {
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("data", list);
+        map.put("draw", draw);
+        map.put("iTotalRecords", totalElements);
+        map.put("iTotalDisplayRecords", totalElements);
+        return map;
+    }
 }

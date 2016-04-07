@@ -13,10 +13,10 @@ import java.util.List;
 public interface ProductImagesService extends ICommonService<ProductImages> {
 
 
-    public void deleteByProductId(Integer productId);
+    public void deleteByProductId(Long productId);
 
-    public void delete(Integer productId, Integer imageId);
+    public void delete(Long productId, Long imageId);
 
 
-    public List<Image> findImageListByProduct(Integer productId);
+    public List<Image> findImageListByProduct(Long productId);
 }

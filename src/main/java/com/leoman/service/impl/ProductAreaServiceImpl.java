@@ -45,13 +45,13 @@ public class ProductAreaServiceImpl implements ProductAreaService {
     }
 
     @Override
-    public ProductArea getById(int id) {
+    public ProductArea getById(Long id) {
         return productAreaDao.findOne(id);
     }
 
     @Override
     @Transactional
-    public ProductArea deleteById(int id) {
+    public ProductArea deleteById(Long id) {
         ProductArea productArea = getById(id);
         productAreaDao.delete(productArea);
         return productArea;
@@ -76,8 +76,8 @@ public class ProductAreaServiceImpl implements ProductAreaService {
 
     @Override
     @Transactional
-    public void deleteAll(int[] ids) {
-        for (int id : ids) {
+    public void deleteAll(Long[] ids) {
+        for (Long id : ids) {
             deleteById(id);
         }
     }

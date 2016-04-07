@@ -7,5 +7,5 @@ import com.leoman.entity.ProductArea;
 /**
  * Created by wangbin on 2015/8/20.
  */
-public interface ProductAreaDao extends JpaRepository<ProductArea, Integer> {
+public interface ProductAreaDao extends JpaRepository<ProductArea, Long> {
 }
