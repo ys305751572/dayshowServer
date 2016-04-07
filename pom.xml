@@ -250,7 +250,7 @@
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
-			<version>2.3</version>
+			<version>2.2.4</version>
 		</dependency>
 
 
@@ -305,7 +305,7 @@
 
 	<profiles>
 		<profile>
-			<id>dev-wb</id>
+			<id>dev-deploy</id>
 			<properties>
 				<pro.jdbc.url>jdbc:mysql://4.16.3.75:3306/dayshow?characterEncoding=UTF-8</pro.jdbc.url>
 				<pro.jdbc.username>root</pro.jdbc.username>
@@ -314,11 +314,22 @@
 				<pro.upload.path>D:/devsoftware/apache-tomcat-7.0.67/webapps/files/upload/</pro.upload.path>
 			</properties>
 		</profile>
+
+		<profile>
+			<id>dev-localhost</id>
+			<properties>
+				<pro.jdbc.url>jdbc:mysql://4.16.3.75:3306/dayshow?characterEncoding=UTF-8</pro.jdbc.url>
+				<pro.jdbc.username>root</pro.jdbc.username>
+				<pro.jdbc.password>root</pro.jdbc.password>
+				<pro.upload.url>http://localhost:8080/files/upload/</pro.upload.url>
+				<pro.upload.path>F:/server/tomcat-kdxg/webapps/files/upload/</pro.upload.path>
+			</properties>
+		</profile>
 	</profiles>
 
 
 	<build>
-		<finalName>wine-tasting</finalName>
+		<finalName>dayshow_server</finalName>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -342,7 +353,7 @@
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.3</version>
 					<configuration>
-						<warName>wine-tasting</warName>
+						<warName>dayshow_server</warName>
 					</configuration>
 				</plugin>
 			</plugins>

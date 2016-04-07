@@ -53,8 +53,4 @@ public abstract class AbstractUploadService {
 
         return fileBo;
     }
-
-
-
-
 }

@@ -18,384 +18,433 @@
       <table id="9" parent="1" name="tb_record"/>
       <table id="10" parent="1" name="tb_user"/>
       <table id="11" parent="1" name="tb_share"/>
-      <column id="12" parent="2" name="id">
+      <table id="12" parent="1" name="tb_image"/>
+      <table id="13" parent="1" name="tb_share_image"/>
+      <column id="14" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="13" parent="2" name="user_name">
+      <column id="15" parent="2" name="user_name">
         <comment>后台账号</comment>
         <mandatory>1</mandatory>
         <data-type>varchar(15)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="14" parent="2" name="password">
+      <column id="16" parent="2" name="password">
         <comment>后台密码</comment>
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="15" parent="2" name="mobile">
+      <column id="17" parent="2" name="mobile">
         <comment>电话号码</comment>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="16" parent="2" name="name">
+      <column id="18" parent="2" name="name">
         <comment>管理员姓名</comment>
         <mandatory>1</mandatory>
         <data-type>varchar(15)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="17" parent="2" name="create_date">
+      <column id="19" parent="2" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="18" parent="2" name="update_date">
+      <column id="20" parent="2" name="update_date">
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="19" parent="2" name="PRIMARY">
+      <key id="21" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="20" parent="3" name="id">
+      <column id="22" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="21" parent="3" name="register_agreement">
+      <column id="23" parent="3" name="register_agreement">
         <comment>注册协议</comment>
         <data-type>varchar(3000)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="22" parent="3" name="create_date">
+      <column id="24" parent="3" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="23" parent="3" name="PRIMARY">
+      <key id="25" parent="3" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="24" parent="4" name="id">
+      <column id="26" parent="4" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="25" parent="4" name="content">
+      <column id="27" parent="4" name="content">
         <data-type>varchar(2000)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="26" parent="4" name="type">
+      <column id="28" parent="4" name="type">
         <comment>类型:0.注册协议 1.关于软件 2.帮助 3.测试帮助</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="27" parent="4" name="create_date">
+      <column id="29" parent="4" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="28" parent="4" name="update_date">
+      <column id="30" parent="4" name="update_date">
         <comment>修改时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="29" parent="4" name="PRIMARY">
+      <key id="31" parent="4" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="30" parent="5" name="id">
+      <column id="32" parent="5" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="31" parent="5" name="number">
+      <column id="33" parent="5" name="number">
         <comment>编号</comment>
         <data-type>varchar(20)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="32" parent="5" name="level">
+      <column id="34" parent="5" name="level">
         <comment>等级：1：等级一，2：等级二，3：等级三</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="33" parent="5" name="icon">
+      <column id="35" parent="5" name="icon">
         <comment>勋章图标</comment>
         <data-type>varchar(200)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="34" parent="5" name="create_date">
+      <column id="36" parent="5" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="35" parent="5" name="update_date">
+      <column id="37" parent="5" name="update_date">
         <comment>修改时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="36" parent="5" name="PRIMARY">
+      <key id="38" parent="5" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="37" parent="6" name="id">
+      <column id="39" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="38" parent="6" name="user_id">
+      <column id="40" parent="6" name="user_id">
         <comment>用户ID</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="39" parent="6" name="part">
+      <column id="41" parent="6" name="part">
         <comment>测量部位:0.颈部,1.手部,2:脸部</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="40" parent="6" name="measure_moisture">
+      <column id="42" parent="6" name="measure_moisture">
         <comment>水分值</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="41" parent="6" name="measure_grease">
+      <column id="43" parent="6" name="measure_grease">
         <comment>油脂</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="42" parent="6" name="address">
+      <column id="44" parent="6" name="address">
         <comment>测量城市</comment>
         <data-type>varchar(50)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="43" parent="6" name="create_date">
+      <column id="45" parent="6" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="44" parent="6" name="update_date">
+      <column id="46" parent="6" name="update_date">
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="45" parent="6" name="PRIMARY">
+      <key id="47" parent="6" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="46" parent="7" name="id">
+      <column id="48" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="47" parent="7" name="part">
+      <column id="49" parent="7" name="part">
         <comment>部位:0.颈部,1.手部,2:脸部</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="48" parent="7" name="level">
+      <column id="50" parent="7" name="level">
         <comment>等级 0:一级</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="49" parent="7" name="moisture_up">
+      <column id="51" parent="7" name="moisture_up">
         <comment>正常水分范围，上限</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="50" parent="7" name="moisture_down">
+      <column id="52" parent="7" name="moisture_down">
         <comment>正常水分范围，下限</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="51" parent="7" name="grease_up">
+      <column id="53" parent="7" name="grease_up">
         <comment>正常油脂范围，上限</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="52" parent="7" name="grease_down">
+      <column id="54" parent="7" name="grease_down">
         <comment>正常油脂范围，下限</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="53" parent="7" name="type_x">
+      <column id="55" parent="7" name="type_desc">
+        <comment>类型描述</comment>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="56" parent="7" name="type_x">
         <comment>0.小于,1.等于,2.大于</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="54" parent="7" name="type_y">
+      <column id="57" parent="7" name="type_y">
         <comment>0.小于,1.等于,2.大于</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="55" parent="7" name="skin_type">
+      <column id="58" parent="7" name="skin_type">
         <comment>肤质:0.敏感性,1.中性,2.油性,3.干性,4.混合性</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="56" parent="7" name="result">
+      <column id="59" parent="7" name="result">
         <comment>结果建议</comment>
         <data-type>varchar(500)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="57" parent="7" name="create_date">
+      <column id="60" parent="7" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="58" parent="7" name="update_date">
+      <column id="61" parent="7" name="update_date">
         <comment>修改时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="59" parent="7" name="PRIMARY">
+      <key id="62" parent="7" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="60" parent="8" name="id">
+      <column id="63" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="61" parent="8" name="open_id">
+      <column id="64" parent="8" name="open_id">
         <comment>第三方登录凭证</comment>
         <mandatory>1</mandatory>
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="62" parent="8" name="user_id">
+      <column id="65" parent="8" name="user_id">
         <comment>用户ID</comment>
         <data-type>int(32)</data-type>
       </column>
-      <column id="63" parent="8" name="create_date">
+      <column id="66" parent="8" name="platform">
+        <comment>WEIXIN:微信,WEIBO:微博</comment>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="67" parent="8" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="64" parent="8" name="update_date">
+      <column id="68" parent="8" name="update_date">
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="65" parent="8" name="PRIMARY">
+      <key id="69" parent="8" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <column id="66" parent="9" name="ID">
+      <column id="70" parent="9" name="ID">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="67" parent="9" name="user_id">
+      <column id="71" parent="9" name="user_id">
         <comment>发布用户ID</comment>
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="68" parent="9" name="contact">
+      <column id="72" parent="9" name="contact">
         <comment>联系方式</comment>
         <data-type>varchar(50)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="69" parent="9" name="content">
+      <column id="73" parent="9" name="content">
         <comment>反馈内容</comment>
         <data-type>varchar(50)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="70" parent="9" name="is_list">
+      <column id="74" parent="9" name="is_list">
         <comment>状态</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="71" parent="9" name="create_date">
+      <column id="75" parent="9" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="72" parent="9" name="update_date">
+      <column id="76" parent="9" name="update_date">
         <comment>更新时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="73" parent="9" name="PRIMARY">
+      <key id="77" parent="9" name="PRIMARY">
         <columns>ID</columns>
         <primary>1</primary>
       </key>
-      <column id="74" parent="10" name="ID">
+      <column id="78" parent="10" name="ID">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="75" parent="10" name="mobile">
+      <column id="79" parent="10" name="mobile">
         <comment>账号</comment>
         <mandatory>1</mandatory>
         <data-type>varchar(20)</data-type>
       </column>
-      <column id="76" parent="10" name="password">
+      <column id="80" parent="10" name="password">
         <comment>密码</comment>
         <mandatory>1</mandatory>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="77" parent="10" name="weixin">
+      <column id="81" parent="10" name="weixin">
         <comment>微信账号</comment>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="78" parent="10" name="weibo">
+      <column id="82" parent="10" name="weibo">
         <comment>微博账号</comment>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="79" parent="10" name="nickname">
+      <column id="83" parent="10" name="nickname">
         <comment>昵称</comment>
         <data-type>varchar(50)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="80" parent="10" name="avater">
+      <column id="84" parent="10" name="avater">
         <comment>头像</comment>
         <data-type>varchar(200)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="81" parent="10" name="gender">
+      <column id="85" parent="10" name="gender">
         <comment>性别:1.男 2.女</comment>
         <data-type>int(11)</data-type>
         <default-expression>&apos;1&apos;</default-expression>
       </column>
-      <column id="82" parent="10" name="height">
+      <column id="86" parent="10" name="height">
         <comment>身高</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="83" parent="10" name="weight">
+      <column id="87" parent="10" name="weight">
         <comment>体重</comment>
         <data-type>double</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="84" parent="10" name="year">
+      <column id="88" parent="10" name="year">
         <comment>出身年份</comment>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="85" parent="10" name="skin">
+      <column id="89" parent="10" name="skin">
         <comment>肤质:0.敏感性,1.中性,2.油性,3.干性,4.混合性</comment>
         <data-type>int(11)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="86" parent="10" name="create_date">
+      <column id="90" parent="10" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="87" parent="10" name="update_date">
+      <column id="91" parent="10" name="update_date">
         <comment>更新时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="88" parent="10" name="PRIMARY">
+      <key id="92" parent="10" name="PRIMARY">
         <columns>ID</columns>
         <primary>1</primary>
       </key>
-      <column id="89" parent="11" name="id">
+      <column id="93" parent="11" name="id">
         <mandatory>1</mandatory>
         <data-type>bigint(32)</data-type>
       </column>
-      <column id="90" parent="11" name="number">
+      <column id="94" parent="11" name="number">
         <comment>编号</comment>
         <data-type>varchar(20)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="91" parent="11" name="content">
+      <column id="95" parent="11" name="content">
         <comment>内容</comment>
         <data-type>varchar(2000)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="92" parent="11" name="name">
+      <column id="96" parent="11" name="name">
         <comment>模板名称</comment>
         <data-type>varchar(20)</data-type>
         <default-expression>&apos;&apos;</default-expression>
       </column>
-      <column id="93" parent="11" name="level">
+      <column id="97" parent="11" name="level">
         <comment>等级:0:所有用户，1:一级及以上用户，2:二级及以上用户，3:三级及以上用户</comment>
         <data-type>int(2)</data-type>
         <default-expression>&apos;0&apos;</default-expression>
       </column>
-      <column id="94" parent="11" name="create_date">
+      <column id="98" parent="11" name="cover_image_id">
+        <data-type>bigint(32)</data-type>
+      </column>
+      <column id="99" parent="11" name="create_date">
         <comment>创建时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <column id="95" parent="11" name="update_date">
+      <column id="100" parent="11" name="update_date">
         <comment>更新时间</comment>
         <data-type>bigint(20)</data-type>
       </column>
-      <key id="96" parent="11" name="PRIMARY">
+      <key id="101" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="102" parent="12" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(32)</data-type>
+      </column>
+      <column id="103" parent="12" name="path">
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="104" parent="12" name="thumbs">
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="105" parent="12" name="attribute">
+        <data-type>varchar(500)</data-type>
+      </column>
+      <column id="106" parent="12" name="create_date">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="107" parent="12" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="108" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(32)</data-type>
+      </column>
+      <column id="109" parent="13" name="share_id">
+        <data-type>bigint(32)</data-type>
+      </column>
+      <column id="110" parent="13" name="image_id">
+        <data-type>bigint(32)</data-type>
+      </column>
+      <key id="111" parent="13" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
