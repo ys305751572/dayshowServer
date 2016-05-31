@@ -104,12 +104,10 @@ public class HelpController extends CommonController {
     public String detail(Long id,Model model) {
 
         Help help = service.getById(id);
-//        if(admin.getContent() != null) {
-//            admin.setContent(admin.getContent().replace("&lt","<").replace("&gt",">"));
-//        }
+        if(help.getContent() != null) {
+            help.setContent(help.getContent().replace("&lt","<").replace("&gt",">"));
+        }
         model.addAttribute("help",help);
-
-
         return "help/details";
     }
 }

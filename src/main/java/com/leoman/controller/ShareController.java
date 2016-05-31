@@ -10,6 +10,7 @@ import com.leoman.entity.Share;
 import com.leoman.entity.User;
 import com.leoman.service.ShareService;
 import com.leoman.service.UserService;
+import com.leoman.utils.ConfigUtil;
 import com.leoman.utils.WebUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -79,7 +80,12 @@ public class ShareController extends CommonController {
         if (id != null) {
             try {
                 Share share = service.getById(id);
-                share.setContent(share.getContent().replace("&lt","<").replace("&gt",">"));
+                if(share.getImage() != null) {
+                    share.getImage().setPath(ConfigUtil.getString("upload.url") + share.getImage().getPath());
+                }
+                if(share.getContent() != null) {
+                    share.setContent(share.getContent().replace("&lt","<").replace("&gt",">"));
+                }
                 model.addAttribute("share", share);
             } catch (Exception e) {
                 e.printStackTrace();

@@ -2,6 +2,9 @@ package com.leoman.controller;
 
 import com.leoman.controller.common.CommonController;
 import com.leoman.core.Constant;
+import com.leoman.core.bean.Result;
+import com.leoman.entity.Admin;
+import com.leoman.service.AdminService;
 import com.leoman.service.LoginService;
 import com.leoman.utils.CookiesUtils;
 import com.leoman.utils.Md5Util;
@@ -11,9 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -25,6 +30,9 @@ public class IndexController extends CommonController {
 
     @Autowired
     private LoginService loginService;
+
+    @Autowired
+    private AdminService adminService;
 
     @RequestMapping(value = "/login")
     public String login(HttpServletRequest request,
@@ -86,5 +94,38 @@ public class IndexController extends CommonController {
         return "首页";
     }
 
+    @RequestMapping(value = "/checkOldPwd")
+    @ResponseBody
+    public Map<String,String> checkOldPwd(String oldPwd,HttpServletRequest request) {
+        String oldPwdMd5 = Md5Util.md5(oldPwd);
+        Admin admin = (Admin) request.getSession().getAttribute(Constant.SESSION_MEMBER_GLOBLE);
+        Map<String,String> resultMap = new HashMap<String,String>();
+        if(admin.getPassword().equals(oldPwdMd5)) {
+            resultMap.put("ok","");
+        }
+        else {
+            resultMap.put("error","旧密码错误");
+        }
+        return resultMap;
+    }
 
+    @RequestMapping(value = "/modifyPwd")
+    @ResponseBody
+    public Map<String,String> modifyPwd(String newPwd, HttpServletRequest request) {
+        Map<String,String> resultMap = new HashMap<String,String>();
+        try {
+            String newPwdMd5 = Md5Util.md5(newPwd);
+            Admin admin = (Admin) request.getSession().getAttribute(Constant.SESSION_MEMBER_GLOBLE);
+
+
+            Admin _admin = adminService.getById(admin.getId());
+            _admin.setPassword(newPwdMd5);
+            adminService.update(_admin);
+            resultMap.put("status","0");
+            resultMap.put("msg","修改成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return resultMap;
+    }
 }

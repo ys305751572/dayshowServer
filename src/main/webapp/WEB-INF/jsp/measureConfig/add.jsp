@@ -87,7 +87,7 @@
                                         </c:if>
                                     </th>
                                     <th>x = 正常值</th>
-                                    <th>含水量测试结果：干燥</th>
+                                    <th>含水量测试结果：正常</th>
                                 </tr>
                                 <c:forEach items="${list2}" var="config">
                                     <tr>
@@ -119,7 +119,7 @@
                                         </c:if>
                                     </th>
                                     <th>x > 正常值</th>
-                                    <th>含水量测试结果：干燥</th>
+                                    <th>含水量测试结果：湿润</th>
                                 </tr>
                                 <c:forEach items="${list3}" var="config">
                                     <tr>

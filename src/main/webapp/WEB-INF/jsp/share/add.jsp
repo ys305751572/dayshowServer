@@ -91,12 +91,11 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">模板等级:</label>
                                 <div class="col-sm-3">
-                                    <select class="form-control input-sm" id="level" name="level"
-                                            value="${share.level}">
-                                        <option value="0">所有用户</option>
-                                        <option value="1">一级及以上用户</option>
-                                        <option value="2">二级及以上用户</option>
-                                        <option value="2">三级及以上用户</option>
+                                    <select class="form-control input-sm" id="level" name="level">
+                                        <option value="0" <c:if test="${share.level eq 0}">selected</c:if>>所有用户</option>
+                                        <option value="1" <c:if test="${share.level eq 1}">selected</c:if>>一级及以上用户</option>
+                                        <option value="2" <c:if test="${share.level eq 2}">selected</c:if>>二级及以上用户</option>
+                                        <option value="3" <c:if test="${share.level eq 3}">selected</c:if>>三级及以上用户</option>
                                     </select>
                                 </div>
                             </div>

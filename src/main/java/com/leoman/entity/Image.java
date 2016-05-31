@@ -38,7 +38,7 @@ public class Image implements Serializable {
     }
 
     public String getPath() {
-        return ConfigUtil.getString("upload.url") + path;
+        return path;
     }
 
     public void setPath(String path) {

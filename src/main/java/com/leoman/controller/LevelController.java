@@ -4,9 +4,11 @@ import com.leoman.common.exception.GeneralExceptionHandler;
 import com.leoman.common.factory.DataTableFactory;
 import com.leoman.controller.common.CommonController;
 import com.leoman.core.bean.Result;
+import com.leoman.entity.Image;
 import com.leoman.entity.Level;
 import com.leoman.service.LevelService;
 import com.leoman.service.UploadImageService;
+import com.leoman.utils.ConfigUtil;
 import com.leoman.utils.WebUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,6 +24,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistration
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -61,6 +64,14 @@ public class LevelController extends CommonController {
         try {
             int pageNum = getPageNum(start, length);
             Page<Level> page = service.find(pageNum, length);
+            List<Level> list = page.getContent();
+
+            if(list != null && !list.isEmpty()) {
+                for (Level _l : list) {
+                    _l.setIcon(ConfigUtil.getString("upload.url") + _l.getIcon());
+                }
+            }
+
             Map<String, Object> result = DataTableFactory.fitting(draw, page);
             WebUtil.print(response, result);
         } catch (Exception e) {
